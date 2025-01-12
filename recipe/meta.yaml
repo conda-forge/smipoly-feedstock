@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/smipoly-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/smipoly-{{ version }}.tar.gz
   sha256: 7f354ca6130104d598f73742937d5c139dc0079a0a0861eeaa6fbb94be0e9267
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=45
     - wheel
     - setuptools-scm >=6.0
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - rdkit >=2020.09.1.0
     - numpy >=1.20.2
     - pandas >=1.2.4
@@ -34,6 +34,7 @@ test:
     - pip list
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/PEJpOhno/SMiPoly
