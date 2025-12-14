@@ -1,5 +1,5 @@
 {% set name = "smipoly" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/smipoly-{{ version }}.tar.gz
-  sha256: aeb1922a0463ea22a97c5babb508d1dd0fbef6ca9b37e3f26fa6c29ad540d6ad
+  sha256: ec66aac82b6f949536eaca91166819689699196a847ae2fc2d2ab1cb0c486867
 
 build:
   noarch: python
