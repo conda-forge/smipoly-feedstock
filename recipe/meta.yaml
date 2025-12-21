@@ -21,6 +21,7 @@ requirements:
     - wheel
     - setuptools-scm >=6.0
     - pip
+    - hatchling >=1.26
   run:
     - python >={{ python_min }}
     - rdkit >=2023.09.1.0
