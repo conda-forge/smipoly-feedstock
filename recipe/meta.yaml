@@ -1,5 +1,5 @@
 {% set name = "smipoly" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/smipoly-{{ version }}.tar.gz
-  sha256: ec66aac82b6f949536eaca91166819689699196a847ae2fc2d2ab1cb0c486867
+  sha256: 572dcaf53452976da312d79939a7dce25099bc81a89c87c0ce2c2a540782a635
 
 build:
   noarch: python
@@ -17,9 +17,9 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=45
+    # - setuptools >=45
     - wheel
-    - setuptools-scm >=6.0
+    # - setuptools-scm >=6.0
     - pip
     - hatchling >=1.26
   run:
